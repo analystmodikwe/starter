@@ -1,14 +1,11 @@
 # AI Usage Log
 
-# AI Usage Log
-
-I used Claude (Anthropic) throughout this build as a pairing partner — planning the
+I used Claude (Anthropic) as a pairing partner — planning the
 architecture, generating first-pass component code, and explaining tradeoffs back to me
 so I could defend them. The three moments below are real judgment calls from that
 process, not AI output I shipped unread.
 
 ## AI moment 1 — the default visual design would have been generic
-
 - What I was trying to do: Get a distinctive visual identity for the app, not a
   templated one, since design & creativity is 25% of the grade.
 - The prompt I wrote: Asked for a design direction for a neighbourhood tool-lending app,
