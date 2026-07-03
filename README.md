@@ -8,6 +8,11 @@ most of the mark. Then read `PRESENTATION-GUIDE.md` for the Loom.
 npm install
 npm run dev
 ```
+
+## link
+https://starter-one-sage.vercel.app/
+
+
 Type-check anytime with `npm run typecheck` (strict mode, no `any`).
 
 ## What's here
