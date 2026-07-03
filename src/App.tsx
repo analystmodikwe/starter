@@ -63,3 +63,24 @@ export function App() {
             />
           );
         })()}
+
+        
+      {screen.name === "booking" &&
+        (() => {
+          const item = itemsState.status === "ready" ? itemsState.items.find((i) => i.id === screen.itemId) : undefined;
+          if (!item) {
+            return <MissingItemFallback onBack={goHome} />;
+          }
+          return (
+            <BookingScreen
+              item={item}
+              session={session}
+              // Lifted up to App so the session survives navigating back
+              // to browse and into a second booking, instead of resetting
+              // every time BookingScreen unmounts.
+              onSessionCreated={setSession}
+              onBack={() => setScreen({ name: "detail", itemId: item.id })}
+              onDone={goHome}
+            />
+          );
+        })()}
