@@ -89,3 +89,15 @@ export function App() {
     </>
   );
 }
+
+/** Shown instead of a broken detail/booking screen when the item lookup fails. */
+function MissingItemFallback({ onBack }: { onBack: () => void }) {
+  return (
+    <div className="page">
+      <p>Loading…</p>
+      <button type="button" className="btn btn-ghost" onClick={onBack}>
+        ← Back to browse
+      </button>
+    </div>
+  );
+}
