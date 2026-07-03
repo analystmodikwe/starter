@@ -11,24 +11,10 @@
  * src/data/items.ts (or reshape that — your call).
  * ============================================================ */
 
-import { ITEMS } from "./data/items.ts";
-
-export function App() {
-  return (
-    <main style={{ fontFamily: "system-ui, sans-serif", maxWidth: 720, margin: "0 auto", padding: 24 }}>
-      <h1>Founder Capstone — start here</h1>
-      <p>
-        Read <code>BRIEF.md</code> first. It is most of the assessment. Then delete
-        this file's contents and build the product.
-      </p>
-      <p>
-        There are <strong>{ITEMS.length}</strong> mock items wired up in{" "}
-        <code>src/data/items.ts</code>. Some have no photos, no price, no rating, or
-        are paused/removed. Handling those cases well is part of the craft score.
-      </p>
-      <p style={{ color: "#666" }}>
-        Do not ship this screen. This is scaffolding, not a starting design.
-      </p>
-    </main>
-  );
-}
+import { useState } from "react";
+import { useItems } from "./hooks/useItems.ts";
+import { Header } from "./components/Header.tsx";
+import { HomeScreen } from "./screens/HomeScreen.tsx";
+import { ItemDetailScreen } from "./screens/ItemDetailScreen.tsx";
+import { BookingScreen } from "./screens/BookingScreen.tsx";
+import type { Screen, Session } from "./state/types.ts";
