@@ -5,16 +5,16 @@
   --bg-paper: #565452;      /* content surface */
   --bg-card: #f8f4e8;       /* tag card */
   --ink: #201e1b;
-  --ink-soft: #5c574d;
+  --ink-soft: #0e0d0d;
   --ink-on-dark: #f1ede1;
   --ink-on-dark-soft: #b4ada0;
-  --accent-amber: #dc9a2c;
+  --accent-amber: #b78226;
   --accent-amber-ink: #4a3105;
-  --accent-teal: #2d6a5c;
+  --accent-teal: #3e9883;
   --accent-teal-ink: #f1ede1;
   --accent-rust: #a8452c;
   --border-ink: #201e1b;
-  --focus-ring: #dc9a2c;
+  --focus-ring: #ce8f22;
 
   /* Type */
   --font-display: "Space Grotesk", "Arial Narrow", sans-serif;
