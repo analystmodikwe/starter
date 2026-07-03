@@ -1,8 +1,8 @@
 :root {
   /* Color */
   --bg-workshop: #232226;   /* pegboard / header / footer */
-  --bg-workshop-raised: #2c2b30;
-  --bg-paper: #eee8d8;      /* content surface */
+  --bg-workshop-raised: #313037;
+  --bg-paper: #565452;      /* content surface */
   --bg-card: #f8f4e8;       /* tag card */
   --ink: #201e1b;
   --ink-soft: #5c574d;
