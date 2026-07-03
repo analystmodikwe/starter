@@ -84,3 +84,8 @@ export function App() {
             />
           );
         })()}
+
+        <footer className="app-footer pegboard">ShedShare — a Melsoft Academy capstone project</footer>
+    </>
+  );
+}
