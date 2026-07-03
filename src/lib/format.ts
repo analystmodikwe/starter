@@ -49,3 +49,38 @@ export function formatDistance(distanceKm: number | null): string {
   return `${distanceKm.toFixed(1)} km away`;
 }
 
+/** Rating may be null when an owner has no ratings yet. */
+export function formatRating(rating: number | null, count: number): string {
+  if (rating === null || count === 0) {
+    return "No ratings yet";
+  }
+  return `${rating.toFixed(1)} ★ (${count})`;
+}
+
+/** First letter of first + last name, for the owner avatar fallback (no owner photo field exists). */
+export function initials(name: string): string {
+  const parts = name.trim().split(/\s+/);
+  const first = parts[0]?.[0] ?? "";
+  const last = parts.length > 1 ? parts[parts.length - 1]?.[0] ?? "" : "";
+  return (first + last).toUpperCase();
+}
+
+/** Human-readable "3 Jul – 5 Jul" style range for the booking summary. */
+export function formatDateRange(startISO: string, endISO: string): string {
+  const start = new Date(startISO);
+  const end = new Date(endISO);
+  const fmt = new Intl.DateTimeFormat("en-ZA", { day: "numeric", month: "short" });
+  return `${fmt.format(start)} – ${fmt.format(end)}`;
+}
+
+/**
+ * Whole days between two ISO date strings, minimum 1 — used to drive
+ * both the "3 days" summary line and the pricing calculation in
+ * BookingScreen's describeTotal.
+ */
+export function daysBetween(startISO: string, endISO: string): number {
+  const start = new Date(startISO);
+  const end = new Date(endISO);
+  const ms = end.getTime() - start.getTime();
+  return Math.max(1, Math.round(ms / (1000 * 60 * 60 * 24)));
+}
